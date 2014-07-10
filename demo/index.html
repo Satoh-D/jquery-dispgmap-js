@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Demo | jQuery Acc JS</title>
+<link href="http://www.css-reset.com/css/meyer.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Raleway:400,900'>
+<style>
+body {
+	background: #0098a6;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+}
+.mod-page {
+	padding: 100px 20px;
+}
+.mod-ttl {
+	font-size: 500%;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.mod-ttl02 {
+	font-size: 300%;
+	margin: 150px 0 50px;
+	text-align: center;
+}
+.mod-txt {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.mod-map {
+	margin: 0 auto 100px;
+	height: 300px;
+	width: 80%;
+}
+.mod-pre {
+	background: rgba(0, 0, 0, 0.2);
+	margin: 0 auto 100px;
+	padding: 10px;
+	width: 80%;
+}
+.mod-pre + .mod-map {
+	margin-top: -50px;
+}
+</style>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?v=3&amp;sensor=false"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+<script src="../jquery.dispgmap.js"></script>
+<script>
+$(function() {
+	$('#sample01').dispGmap({
+		targetGeocode: '東京都',
+		zoom: 15
+	});
+	$('#sample02').dispGmap({
+		targetGeocode: '35.658517, 139.701334',
+		zoom: 18
+	});
+});
+</script>
+</head>
+<body>
+<div class="mod-page">
+
+<h1 class="mod-ttl">jQuery Dispgmap JS</h1>
+<p class="mod-txt">a jQuery Plugin to use easily "Google Map Embed"</p>
+
+<!-- <div id="map-sample" class="mod-map"></div> -->
+
+<h2 class="mod-ttl02">Usage</h2>
+
+<pre class="mod-pre"><code>
+&lt;head&gt;
+&lt;script src="//maps.google.com/maps/api/js?v=3&amp;sensor=false"&gt;&lt;/script&gt;
+&lt;script src="jquery.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.dispgmap.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+$(function() {
+	$('#map_id').dispGmap({
+		targetGeocode: 'location name',  //address or latitude/longitude
+		zoom: 18  // zoom Level (Default: 18)
+	});
+})
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id="map_id"&gt;&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h2 class="mod-ttl02">Example</h2>
+
+<pre class="mod-pre"><code>
+&lt;script&gt;
+$(function() {
+	$('#sample01').dispGmap({
+		targetGeocode: '東京都',
+		zoom: 15
+	});
+});
+&lt;/script&gt;
+</code></pre>
+
+<div id="sample01" class="mod-map"></div>
+
+<pre class="mod-pre"><code>
+&lt;script&gt;
+$(function() {
+	$('#sample02').dispGmap({
+		targetGeocode: '35.658517, 139.701334',  // -> Shibuya Station
+		zoom: 18
+	});
+});
+&lt;/script&gt;
+</code></pre>
+
+<div id="sample02" class="mod-map"></div>
+
+<!-- /mod-page --></div>
+</body>
+</html>
