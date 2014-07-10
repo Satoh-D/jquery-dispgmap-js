@@ -40,7 +40,7 @@ $(function() {
 
 ## Browser Support
 
-- IE6+
+- IE8+
 - Google Chrome(win/mac)
 - Firefox(win/mac)
 - Safari(win)
