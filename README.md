@@ -1,7 +1,7 @@
-jquery-compilehandlebarstmpl-js
+jquery-dispmap-js
 ===============================
 
-__"jQuery CompileHandlebarsTmpl.js" is a jQuery Plugin to use easily "Handlebars.js"__
+__"jquery-dispgmap.js" is a jQuery Plugin to use easily Embeding Google Map__
 
 ## Demo
 
